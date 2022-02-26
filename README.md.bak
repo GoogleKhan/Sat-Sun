@@ -73,42 +73,9 @@ Accessing Members:
 The main():
 =================
 
- public class Test
- {
-
 	public static void main(String[] shad)
 		{
 		}
-}
-
--> called by JVM which is an external entity, hence declared public.
--> due to static , called directly with class name, otherwise, JVM will have to create an object which is an unnecessary task.
-
-				Test obj = new Test();
-				obj.main(----);
-
-				Test.main(-----);
-
-------------------------------------------------------------
-Ptinting in Java:
--------------------
-
-System.out.print(data) -> data
-System.out.println(data) -> data + newLine
-System.out.printf(data) -> data + formatting like c/c++
-
-  int i =10;
-  
-  System.out.println(i); //  10
-  System.out.println('i'); // i as char value
-  System.out.println("i"); // i as string value
-  System.out.println(10); // 10 as number or int value
-  System.out.println("10"); // 10 as a string value
-  System.out.println( 2 * 5); // 10
-
-
-
-
 
 
 
