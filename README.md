@@ -106,22 +106,235 @@ System.out.printf(data) -> data + formatting like c/c++
   System.out.println("10"); // 10 as a string value
   System.out.println( 2 * 5); // 10
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+class B
+{
+	void foo()
+		{
 		
+		}
+}
+-----------------
+B v1 = new B();
+   v1.foo();
+-----------------
+class A
+	{
+		--------
+		----
+		static B v2;
+		-------
+		---
+	}
+
+ A.v2.foo();
+----------------------------------------------------------------
+System.out.println()
+
+A -> System class
+B -> PrintStream class
+
+--------------------------------------------------------------
+Tokens: are basic building block of a source code.
+----------------------------------------------------
+public class A
+{
+ int i = 10;
+}
+================================================================================
+
+----------------Data Types------------------------
+
+Data Types (1Byte = 8 bits) Binary Digit
+-----------
+1. Primitive
+	|-Boolean
+		|-boolean(NA)
+	
+	|-Numeric
+		|-Integral
+			|-Character
+				|-char (2B)
+			|-Integer
+				|-byte (1B)
+				|-short(2B)
+				|-int (4B)
+				|-long (8B)
+		|-Floating Point
+			|-float (4B)
+			|-double (8B)
+
+
+2. Reference Type
+	a. class
+	b. interface
+	c. array
+	d. enum
+	d. annotation
+
+-----------------------------------------------
+byte -> short -> int -> long -> float -> double
+		char -> int
 		
+-> Widening is done implicitly.
+-> Narrowing requires casting.
+
+
+
+================================================================================
+
+Token 
+------
+ |- keywords: [are predefine words to the compiler] -> 53 (lowercase)
+		*) Reserved words (goto, const)
+ 
+ |- Indentifiers: [name of class, method, variable, etc aalled identifier]
+			1. only letter, digit, '_', '$'
+			2. never starts from digit
+			3. cannot use keywords
+
+ |- Literals:[values]
+	    |- Integer values: {10, -10, 0b10, 010, 0x10 }
+				*)default data type is int
+				
+        |- Floating point values {2.3, -2.3, 2E-19, 2e19}
+ 				*)default data type is double 
+				
+		|- Boolean {true, false}
 		
-		
-		
-		
+		|- Character {'a', '1', '#'}
+			|- Escape sequence
+		|- String {"a","1","Shadab@gmail.com"}
+ 
+  |- Operators
+  |- White spaces(space, tab, enter)
+  |- Comments
+		|- // single line comments
+		|- /* Multi Line comments */
+		|- /** Java Documentation Comment*/
+
+-----------------------------------------------------------
+Control flow statements:
+---------------------------
+1) if(<boolExpr>)
+	{
+		//body
+	}
+
+2) if(<boolExpr>)
+	{
+		//body
+	}
+	else
+	{
+		//body
+	}
+
+3) if(<boolExpr>)
+	{
+		//body
+	}
+	else if(<boolExpr>)
+	{
+		//body
+	}
+	else
+	{
+		//body
+	}
+--------------------------------------------------------
+In c/c++: Every Non-Zer number treated as TRUE and zero treated as FALSE
+---------------
+
+ int a = 10;
+ 
+ if( a = 15){
+	printf("Hi");
+ }
+ else{
+   printf("Bye");
+ }
+
+Ouput: Hi
+--------
+
+In Java: 
+--------
+
+ int a = 10;
+ 
+ if( a = 15)//Error
+ {
+	SOP("Hi");
+ }
+ else{
+   SOP("Bye");
+ }
+
+Ouput: ERROR
+-------------------------------------------------------------------------------------
+Switch statements:
+-----------------------
+Till Java4 : char, byte, short, int
+From Java5: enum, Wrapper classes
+From Java7: String
+
+Syntax:
+-----------
+
+	switch(<var>)
+	{
+	
+		case <label-1> :
+					------
+					------
+	    case <label-2> :
+					------
+					------
+		case <label-n> :
+					------
+					------
+		default: 
+					------
+					------
+	}
+
+Example:
+-----------
+
+		int day = 4; // user input;
+
+		switch (day) {
+		case 1: {
+			System.out.println("Monday");
+			break;
+		}
+		case 2: {
+			System.out.println("Tuesday");
+			break;
+		}
+		case 3: {
+			System.out.println("Wednesday");
+			break;
+		}
+		case 4: {
+			System.out.println("Thursday");
+			break;
+		}
+		case 5: {
+			System.out.println("Friday");
+			break;
+		}
+		case 6: {
+			System.out.println("Saturday");
+			break;
+		}
+		case 7: {
+			System.out.println("Sunday");
+			break;
+		}
+		default:
+			System.out.println("Are you CRAZY !!!");
+		}
+
+---------------------------------------------------------------
+Loops?
